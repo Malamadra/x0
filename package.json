@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "x0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "front": "yarn workspace front start",
+    "back": "yarn workspace back dev",
+    "start": "concurrently --kill-others-on-fail \"yarn back\"  \"yarn front\""
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
